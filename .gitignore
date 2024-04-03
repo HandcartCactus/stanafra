@@ -1,0 +1,90 @@
+# Temporary and binary files
+*~
+*.py[cod]
+*.so
+*.cfg
+!setup.cfg
+*.orig
+*.log
+*.pot
+__pycache__/*
+.cache/*
+.*.swp
+*/.ipynb_checkpoints/*
+*.pyc
+
+# Project files
+.ropeproject
+.project
+.pydevproject
+.settings
+.idea
+
+# Package files
+*.egg
+*.eggs/
+.installed.cfg
+*.egg-info
+
+# Unittest and coverage
+htmlcov/*
+.coverage
+.tox
+junit.xml
+coverage.xml
+
+# Build and docs folder/files
+build/*
+dist/*
+sdist/*
+docs/api/*
+docs/_build/*
+docs/build/*
+cover/*
+MANIFEST
+.mypy_cache/*
+
+# Unused code
+backup/*
+
+# macOS Desktop Services Store
+.DS_Store
+
+# plots
+*.png
+
+venv
+backend/.venv
+
+!.keep
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+
+/cypress/videos/
+/cypress/screenshots/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+*.tsbuildinfo
