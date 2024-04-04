@@ -7,7 +7,8 @@ from contextlib import contextmanager
 from ..configs import get_settings
 
 settings = get_settings()
-engine = create_engine(settings.SQLALCHEMY_DATABASE_URI, pool_pre_ping=True)
+# settings.SQLALCHEMY_DATABASE_URI is pydantic.PostgresDsn for validation reasons
+engine = create_engine(str(settings.SQLALCHEMY_DATABASE_URI), pool_pre_ping=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
