@@ -4,8 +4,10 @@ import ast
 import os
 import secrets
 from typing import List, Union, Dict, Optional, Any
-from pydantic import BaseModel, AnyHttpUrl, BaseSettings, validator, PostgresDsn
+from pydantic import BaseModel, AnyHttpUrl, validator, PostgresDsn
+from pydantic_settings import BaseSettings
 from ..utils.logging import StandardFormatter, ColorFormatter
+from typing import Optional
 
 
 class LoggingConfig(BaseModel):
@@ -43,8 +45,8 @@ class Settings(BaseSettings):
     cross-origin requests.
     For example, your domain is example, then the regex should be something like
         ```r"https:\/\/.*\.example\.?"```
-    """
-    CORS_ORIGIN_REGEX: str = None
+    """ 
+    CORS_ORIGIN_REGEX: Optional[str] = None
     """A list of HTTP methods that should be allowed for cross-origin requests.
     Defaults to ['*']. You can use ['GET'] to allow standard GET method."""
     CORS_METHODS: List[str] = ['GET']
@@ -79,10 +81,10 @@ class Settings(BaseSettings):
         raise ValueError(v)
 
     # ########################### DB Configuration #############################
-    POSTGRES_SERVER: str = os.getenv("POSTGRES_SERVER")
-    POSTGRES_USER: str = os.getenv("POSTGRES_USER")
-    POSTGRES_PASSWORD: str = os.getenv("POSTGRES_PASSWORD")
-    POSTGRES_DB: str = os.getenv("POSTGRES_DB")
+    # POSTGRES_SERVER: Optional[str] = os.getenv("POSTGRES_SERVER")
+    # POSTGRES_USER: Optional[str] = os.getenv("POSTGRES_USER")
+    # POSTGRES_PASSWORD: Optional[str] = os.getenv("POSTGRES_PASSWORD")
+    # POSTGRES_DB: Optional[str] = os.getenv("POSTGRES_DB", '')
     # set the default value to None, such that the assemble_db_connection can
     # build the URI for us and do checks.
     SQLALCHEMY_DATABASE_URI: Optional[PostgresDsn] = None
