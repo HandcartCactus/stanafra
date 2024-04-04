@@ -6,9 +6,9 @@ ARG MODE
 ENV SQLALCHEMY_DATABASE_URI=${DB_CONNECTION}
 ENV MODE=${MODE}
 
-COPY ./requirements/base.txt .
+COPY ./backend/stanafra/requirements/base.txt .
 RUN pip install -r base.txt
 
-COPY ./scripts /app
-COPY ./stanafra /app
+COPY ./backend/stanafra/scripts /app
+COPY ./backend/stanafra/stanafra /app
 WORKDIR /app
