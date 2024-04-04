@@ -1,6 +1,22 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <div>
+      <h1>
+        <abbr>STANAFRA</abbr>
+      </h1>
+      
+      <p><abbr>STANAFRA</abbr> is short for "Scalable Textual Analysis Frameworks". <abbr>STANAFRA</abbr> is a platform that helps make sense of the universe.</p>
+    </div>
+    <div>
+      
+    </div>
+    <div>
+      <article>
+        <h2>Who Is <abbr>STANAFRA</abbr> For?</h2>
+        <p><abbr>STANAFRA</abbr> is for anyone who needs a workflow to read "everything everywhere all at once".</p>
+      </article>
+    </div>
+    
   </div>
 </template>
 
