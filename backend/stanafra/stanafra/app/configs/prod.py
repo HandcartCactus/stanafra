@@ -5,7 +5,7 @@ from .base import Settings, LoggingConfig
 
 
 class SettingsProd(Settings):
-    DEBUG = False
+    DEBUG:bool = False
     LOGGING_CONFIG: LoggingConfig = {
         "version": 1,
         "disable_existing_loggers": False,
