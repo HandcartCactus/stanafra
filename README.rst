@@ -96,17 +96,17 @@ You can install them via::
 Run API Service
 ~~~~~~~~~~~~~~~
 
-Please check the section `Running the API Service locally <./docs/source/02_usage.rst>`_ for detailed information.
+Please check the section `Running the API Service locally <./backend/stanafra/docs/source/02_usage.rst>`_ for detailed information.
 
 Run Tests
 ~~~~~~~~~
 
-Please check the section `Running Tests locally <./docs/source/02_usage.rst>`_ for detailed information.
+Please check the section `Running Tests locally <./backend/stanafra/docs/source/02_usage.rst>`_ for detailed information.
 
 Build Sphinx Documentation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please check the section `Building Sphinx Documentation locally <./docs/source/02_usage.rst>`_ for detailed information.
+Please check the section `Building Sphinx Documentation locally <./backend/stanafra/docs/source/02_usage.rst>`_ for detailed information.
 
 API Endpoints
 +++++++++++++

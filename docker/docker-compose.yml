@@ -12,7 +12,7 @@ services:
     volumes:
       - ../:/app/
     environment:
-      - PYTHONPATH=/app/stanafra
+      - PYTHONPATH=/app/backend/stanafra/stanafra
     links:
       - "db:db"
     depends_on:
@@ -40,11 +40,11 @@ services:
         DB_CONNECTION: "postgresql://postgres:mysecretpassword@db:5432/postgres"
         MODE: "TEST"
     entrypoint: >
-      sh -c "sleep 5 && python ./stanafra/main.py"
+      sh -c "sleep 5 && python ./backend/stanafra/stanafra/main.py"
     volumes:
       - ../:/app/
     environment:
-      - PYTHONPATH=/app/stanafra
+      - PYTHONPATH=/app/backend/stanafra/stanafra
     ports:
       - "8080:8080"
     healthcheck:
